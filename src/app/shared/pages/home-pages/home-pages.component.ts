@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'shared-home-pages',
+  selector: 'shared-home-page',
   templateUrl: './home-pages.component.html',
-  styleUrls: ['./home-pages.component.css']
+  styles: [
+  ]
 })
-export class HomePagesComponent {
+export class HomePageComponent {
 
 }

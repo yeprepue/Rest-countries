@@ -15,12 +15,17 @@ const routes: Routes = [
   },
   {
     path: 'by-country',
-    component: ByRegionPageComponent
+    component: ByCountryPageComponent
   },
   {
     path: 'by/:id',
     component: ByCountryPageComponent
   },
+  {
+    path: '**',
+    redirectTo: 'by-capital'
+  },
+
 ];
 
 

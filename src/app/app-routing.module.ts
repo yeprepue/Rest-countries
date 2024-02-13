@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-import { HomePagesComponent } from './shared/pages/home-pages/home-pages.component';
+
 
 import { AboutPagesComponent } from './shared/pages/about-pages/about-pages.component';
 import { ContacPageComponent } from './shared/pages/contac-page/contac-page.component';
+import { SharedModule } from './shared/shared.module';
 const routes: Routes = [
-  {
-    path: '',
-    component: HomePagesComponent
-  },
+  // {
+  //   path: '',
+  //   component: HomePagesComponent
+  // },
   {
     path: 'about',
     component: AboutPagesComponent
@@ -19,8 +20,12 @@ const routes: Routes = [
     component: ContacPageComponent
   },
   {
+    path: 'countries',
+    loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule)
+  },
+  {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'countries'
   },
 ];
 
