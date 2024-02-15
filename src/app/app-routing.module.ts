@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AboutPagesComponent } from './shared/pages/about-pages/about-pages.component';
 import { ContacPageComponent } from './shared/pages/contac-page/contac-page.component';
-import { SharedModule } from './shared/shared.module';
 const routes: Routes = [
   // {
   //   path: '',
